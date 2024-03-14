@@ -1,6 +1,5 @@
 import 'package:device_preview/device_preview.dart';
-
-import 'package:e_commerce_real/view/widgets/btmNavBar.dart';
+import 'package:e_commerce_real/view/pages/introduction%20pages/Login_page.dart';
 import 'package:e_commerce_real/view_model/bloc/cubit/cart/cart_cubit.dart';
 import 'package:e_commerce_real/view_model/bloc/cubit/search_cubit.dart';
 import 'package:e_commerce_real/view_model/bloc/favourite_bloc/favourite_bloc.dart';
@@ -56,7 +55,7 @@ class MyApp extends StatelessWidget {
           locale: DevicePreview.locale(context),
           builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
-          home: const BtmNavBar(),
+          home: const LoginPage(),
         ));
   }
 }

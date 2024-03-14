@@ -27,8 +27,6 @@ class ProductFilterCubit extends Cubit<ProductFilterState> {
   // Filter/search methods
 
   void filterByName(String title) {
-    print('Filtering by: $title');
-
     if (title.isEmpty) {
       emit(LoadedState(
           totalResults)); // Emit the original list if the search query is empty
@@ -38,7 +36,7 @@ class ProductFilterCubit extends Cubit<ProductFilterState> {
           .where((product) =>
               product.title.toLowerCase().contains(title.toLowerCase()))
           .toList();
-      print('Filtered products: $filteredProducts');
+
       emit(LoadedState(filteredProducts));
     } else {
       emit(LoadedState(
